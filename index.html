@@ -3,43 +3,55 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BODYLAND GYM | سرزمین بدن</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>باشگاه بدنسازی سرزمین بدن | BODYLAND GYM اصفهان</title>
+<meta name="description" content="باشگاه بدنسازی BODYLAND GYM در اصفهان، جی، خیابان تالار. مشاهده تعرفه عضویت یک‌ماهه، ساعت کاری و شماره تماس باشگاه.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#101010">
+<meta property="og:title" content="BODYLAND GYM | باشگاه سرزمین بدن">
+<meta property="og:description" content="قدرت، سلامتی و پیشرفت؛ همراه شما در مسیر تناسب اندام در اصفهان.">
+
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HealthClub",
+  "name":"BODYLAND GYM",
+  "description":"باشگاه بدنسازی سرزمین بدن در اصفهان",
+  "telephone":["+989131928262","+983132301313"],
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"جی، خیابان تالار",
+    "addressLocality":"اصفهان",
+    "addressCountry":"IR"
+  }
+}
+</script>
+
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:#101010;color:#fff;font-family:Vazirmatn,sans-serif;line-height:1.9}
 :root{--red:#e32636;--card:#1b1b1b;--muted:#bbb}
-
-/* صفحه شروع */
-.intro{
-position:fixed;inset:0;z-index:1000;background:#090909;
-display:flex;align-items:center;justify-content:center;text-align:center;
-animation:introOut .8s ease 2.7s forwards;
-}
-.intro-content{animation:introIn 1s ease}
-.intro h1{font-size:clamp(38px,9vw,72px);font-weight:900;line-height:1.3;margin:0}
+a{text-decoration:none;color:inherit}
+.intro{position:fixed;inset:0;z-index:1000;background:#080808;display:flex;align-items:center;justify-content:center;text-align:center;animation:hideIntro .7s ease 2.5s forwards}
+.intro h1{font-size:clamp(40px,10vw,75px);font-weight:900;line-height:1.3;margin:0}
 .intro h1 span{color:var(--red)}
 .intro p{letter-spacing:5px;color:#aaa;font-size:13px}
-.intro-line{width:65px;height:4px;background:var(--red);margin:20px auto}
-@keyframes introIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes introOut{to{opacity:0;visibility:hidden;pointer-events:none}}
-
-/* هدر */
+.intro-line{height:4px;width:65px;background:var(--red);margin:20px auto}
+@keyframes hideIntro{to{opacity:0;visibility:hidden;pointer-events:none}}
 header{position:sticky;top:0;z-index:10;background:#111f;border-bottom:1px solid #333;padding:14px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .logo{font-size:23px;font-weight:900}
 .logo span{color:var(--red)}
-nav{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
-nav a{text-decoration:none;color:white}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
 nav a:hover{color:var(--red)}
-
-/* بخش اصلی */
 .hero{min-height:480px;display:flex;align-items:center;padding:65px 8%;background:linear-gradient(90deg,#090909ed,#09090999),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85') center/cover}
-.hero h1{font-size:clamp(35px,7vw,65px);line-height:1.4;margin:0}
+.hero h1{font-size:clamp(36px,7vw,65px);line-height:1.4;margin:0}
 .hero h1 span{color:var(--red)}
-.hero p{color:#ddd;font-size:18px}
-.btn{display:inline-block;background:var(--red);padding:11px 25px;border-radius:7px;font-weight:bold;margin-top:12px;color:white;text-decoration:none}
+.hero p{color:#ddd;font-size:18px;max-width:600px}
+.btn{display:inline-block;background:var(--red);padding:11px 25px;border-radius:8px;font-weight:bold;margin-top:12px;color:white}
 section{padding:65px 8%}
 .heading{text-align:center;font-size:30px;margin:0 0 30px}
 .heading span{color:var(--red)}
@@ -47,19 +59,25 @@ section{padding:65px 8%}
 .about img{width:100%;height:300px;object-fit:cover;border-radius:12px}
 .about p{color:var(--muted)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:17px}
-.card{background:var(--card);padding:22px;border:1px solid #333;border-radius:12px;text-align:center}
+.card{background:var(--card);padding:23px;border:1px solid #333;border-radius:12px;text-align:center;transition:.25s}
+.card:hover{border-color:var(--red);transform:translateY(-4px)}
 .card h3{color:var(--red);margin-top:0}
-.price{font-size:23px;font-weight:900;margin:10px 0}
+.price{font-size:24px;font-weight:900;margin:10px 0}
 .price small{font-size:13px;color:var(--muted)}
-.note{font-size:13px;color:#aaa}
+.membership-intro{text-align:center;color:#bbb;margin-top:-18px;margin-bottom:28px}
+.plan-label{display:inline-block;background:#35151a;color:#ff6470;border-radius:20px;padding:4px 13px;font-size:12px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.contact-card{background:var(--card);border:1px solid #333;border-radius:12px;padding:25px;text-align:center}
+.contact-card h3{color:var(--red)}
+.contact-number{display:block;font-size:22px;font-weight:800;direction:ltr;margin:12px 0}
+.contact-number:hover{color:var(--red)}
+.contact-note{text-align:center;color:#bbb;margin:25px 0 0}
 .schedule{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 .schedule .card{text-align:right}
 .schedule p{border-bottom:1px solid #333;padding-bottom:10px;color:#ddd}
-.contact{text-align:center;background:#191919}
-.contact p{color:#ddd}
-.contact a:not(.btn){color:#fff;text-decoration:none}
-.contact .contact-number{display:block;margin:10px}
-footer{text-align:center;padding:25px;background:#090909;color:#aaa}
+.address{text-align:center;background:#191919}
+.address p{color:#ddd}
+footer{text-align:center;padding:25px;background:#080808;color:#aaa}
 @media(max-width:650px){
 header{justify-content:center}
 nav{justify-content:center;gap:12px}
@@ -69,109 +87,141 @@ section{padding:45px 6%}
 }
 </style>
 </head>
+
 <body>
 
 <div class="intro">
- <div class="intro-content">
-  <h1>BODYLAND<br><span>GYM</span></h1>
-  <div class="intro-line"></div>
-  <p>POWER • HEALTH • FITNESS</p>
- </div>
+  <div>
+    <h1>BODYLAND<br><span>GYM</span></h1>
+    <div class="intro-line"></div>
+    <p>POWER • HEALTH • FITNESS</p>
+  </div>
 </div>
 
 <header>
- <div class="logo">BODYLAND <span>GYM</span></div>
- <nav>
-  <a href="#home">خانه</a>
-  <a href="#about">درباره ما</a>
-  <a href="#prices">تعرفه‌ها</a>
-  <a href="#hours">ساعت کاری</a>
-  <a href="#contact">تماس با ما</a>
- </nav>
+  <div class="logo">BODYLAND <span>GYM</span></div>
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#about">درباره ما</a>
+    <a href="#membership">عضویت یک‌ماهه</a>
+    <a href="#hours">ساعت کاری</a>
+    <a href="#contact">ارتباط با ما</a>
+  </nav>
 </header>
 
 <div class="hero" id="home">
- <div>
-  <h1>اینجا آغاز<br><span>قدرت توست!</span></h1>
-  <p>با انگیزه شروع کن، با قدرت ادامه بده و به بهترین نسخه خودت تبدیل شو.</p>
-  <a href="#prices" class="btn">مشاهده تعرفه عضویت</a>
- </div>
+  <div>
+    <h1>به سرزمین بدن<br><span>خوش آمدید</span></h1>
+    <p>اینجا آغاز مسیر قدرت، سلامتی و پیشرفت توست. با انگیزه شروع کن و با قدرت ادامه بده.</p>
+    <a href="#membership" class="btn">مشاهده تعرفه عضویت</a>
+  </div>
 </div>
 
 <section id="about">
- <h2 class="heading">به سرزمین <span>بدن خوش آمدید</span></h2>
- <div class="about">
-  <div>
-   <h2>BODYLAND GYM</h2>
-   <p>در سرزمین بدن، هر روز فرصتی تازه برای پیشرفت است. با تمرین منظم، اراده و پشتکار، مسیر سلامتی و تناسب اندام خودت را بساز.</p>
-   <p>هدف ما همراهی شما در مسیر قدرت، نشاط و سبک زندگی سالم‌تر است.</p>
+  <h2 class="heading">درباره <span>BODYLAND GYM</span></h2>
+  <div class="about">
+    <div>
+      <h2>هر روز، یک قدم به جلو</h2>
+      <p>در باشگاه سرزمین بدن، هدف فقط تمرین کردن نیست؛ هدف ساختن یک سبک زندگی سالم‌تر، افزایش انرژی و حرکت در مسیر پیشرفت است.</p>
+      <p>با اراده شروع کن، استمرار داشته باش و از مسیر رشد خودت لذت ببر.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85" alt="فضای باشگاه بدنسازی">
   </div>
-  <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85" alt="باشگاه بدنسازی">
- </div>
 </section>
 
-<section id="prices">
- <h2 class="heading">تعرفه <span>عضویت</span></h2>
- <div class="cards">
-  <div class="card">
-   <h3>پلن ۸ جلسه‌ای</h3>
-   <div class="price">۲٬۴۰۰٬۰۰۰</div>
-   <small>تومان</small>
+<section id="membership">
+  <h2 class="heading">عضویت <span>یک‌ماهه</span></h2>
+  <p class="membership-intro">پلن موردنظر خود را انتخاب کنید و تعرفه آن را مشاهده کنید.</p>
+
+  <div class="cards">
+    <div class="card">
+      <span class="plan-label">یک‌ماهه</span>
+      <h3>۸ جلسه تمرین</h3>
+      <div class="price">۲٬۴۰۰٬۰۰۰</div>
+      <small>تومان</small>
+    </div>
+
+    <div class="card">
+      <span class="plan-label">یک‌ماهه</span>
+      <h3>۱۲ جلسه تمرین</h3>
+      <div class="price">۲٬۶۰۰٬۰۰۰</div>
+      <small>تومان</small>
+    </div>
+
+    <div class="card">
+      <span class="plan-label">یک‌ماهه</span>
+      <h3>۱۶ جلسه تمرین</h3>
+      <div class="price">۲٬۹۰۰٬۰۰۰</div>
+      <small>تومان</small>
+    </div>
+
+    <div class="card">
+      <span class="plan-label">یک‌ماهه</span>
+      <h3>۲۰ جلسه تمرین</h3>
+      <div class="price">۳٬۲۰۰٬۰۰۰</div>
+      <small>تومان</small>
+    </div>
+
+    <div class="card">
+      <span class="plan-label">یک‌ماهه</span>
+      <h3>۲۴ جلسه تمرین</h3>
+      <div class="price">۳٬۵۰۰٬۰۰۰</div>
+      <small>تومان</small>
+    </div>
   </div>
-  <div class="card">
-   <h3>پلن ۱۲ جلسه‌ای</h3>
-   <div class="price">۲٬۶۰۰٬۰۰۰</div>
-   <small>تومان</small>
-  </div>
-  <div class="card">
-   <h3>پلن ۱۶ جلسه‌ای</h3>
-   <div class="price">۲٬۹۰۰٬۰۰۰</div>
-   <small>تومان</small>
-  </div>
-  <div class="card">
-   <h3>پلن ۲۰ جلسه‌ای</h3>
-   <div class="price">۳٬۲۰۰٬۰۰۰</div>
-   <small>تومان</small>
-  </div>
-  <div class="card">
-   <h3>پلن ۲۴ جلسه‌ای</h3>
-   <div class="price">۳٬۵۰۰٬۰۰۰</div>
-   <small>تومان</small>
-  </div>
- </div>
- <p class="note" style="text-align:center">برای اطلاع از شرایط ثبت‌نام و عضویت با باشگاه تماس بگیرید.</p>
+
+  <p class="contact-note">برای ثبت‌نام، اطلاع از شرایط عضویت یا هرگونه سؤال درباره تعرفه‌ها، با باشگاه تماس بگیرید.</p>
 </section>
 
 <section id="hours">
- <h2 class="heading">برنامه <span>ساعت کاری</span></h2>
- <div class="schedule">
-  <div class="card">
-   <h3>ساعت کاری آقایان</h3>
-   <p>شنبه تا چهارشنبه: ۶ تا ۸ صبح</p>
-   <p>شنبه تا چهارشنبه: ۱۴ تا ۲۳:۴۵</p>
-   <p>پنجشنبه: ۱۴ تا ۲۱:۴۵</p>
-   <p>جمعه: ۱۴ تا ۱۸:۴۵</p>
+  <h2 class="heading">ساعت <span>کاری باشگاه</span></h2>
+  <div class="schedule">
+    <div class="card">
+      <h3>ساعت کاری آقایان</h3>
+      <p>شنبه تا چهارشنبه: ۶ تا ۸ صبح</p>
+      <p>شنبه تا چهارشنبه: ۱۴ تا ۲۳:۴۵</p>
+      <p>پنجشنبه: ۱۴ تا ۲۱:۴۵</p>
+      <p>جمعه: ۱۴ تا ۱۸:۴۵</p>
+    </div>
+
+    <div class="card">
+      <h3>ساعت کاری بانوان</h3>
+      <p>شنبه تا پنجشنبه: ۸ صبح تا ۱۴</p>
+    </div>
   </div>
-  <div class="card">
-   <h3>ساعت کاری بانوان</h3>
-   <p>شنبه تا پنجشنبه: ۸ تا ۱۴</p>
-  </div>
- </div>
 </section>
 
-<section id="contact" class="contact">
- <h2 class="heading">ارتباط با <span>ما</span></h2>
- <p>برای دریافت اطلاعات بیشتر و هماهنگی ثبت‌نام با ما در تماس باشید.</p>
- <p>آدرس: اصفهان، جی، خیابان تالار</p>
- <a class="contact-number" href="tel:09131928262">۰۹۱۳۱۹۲۸۲۶۲</a>
- <a class="contact-number" href="tel:03132301313">۰۳۱۳۲۳۰۱۳۱۳</a>
- <a href="https://www.google.com/maps/search/?api=1&query=اصفهان+جی+خیابان+تالار" target="_blank" class="btn">مشاهده موقعیت روی نقشه</a>
+<section id="contact">
+  <h2 class="heading">ارتباط با <span>ما</span></h2>
+  <p class="contact-note">برای ثبت‌نام، دریافت اطلاعات و پاسخ به سؤالات خود با ما تماس بگیرید.</p>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>ارتباط با ما ۱</h3>
+      <p>شماره تماس اول باشگاه</p>
+      <a class="contact-number" href="tel:09131928262">09131928262</a>
+      <a class="btn" href="tel:09131928262">تماس با باشگاه</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>ارتباط با ما ۲</h3>
+      <p>شماره تماس دوم باشگاه</p>
+      <a class="contact-number" href="tel:03132301313">03132301313</a>
+      <a class="btn" href="tel:03132301313">تماس با باشگاه</a>
+    </div>
+  </div>
+</section>
+
+<section class="address">
+  <h2 class="heading">آدرس <span>باشگاه</span></h2>
+  <p>اصفهان، جی، خیابان تالار</p>
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=اصفهان+جی+خیابان+تالار" target="_blank" rel="noopener">مشاهده روی نقشه</a>
 </section>
 
 <footer>
- <div class="logo">BODYLAND <span>GYM</span></div>
- <p>قدرت، سلامتی، پیشرفت</p>
- <p>تمام حقوق این وب‌سایت متعلق به باشگاه سرزمین بدن است.</p>
+  <div class="logo">BODYLAND <span>GYM</span></div>
+  <p>قدرت • سلامتی • پیشرفت</p>
+  <p>باشگاه بدنسازی سرزمین بدن</p>
 </footer>
 
 </body>
