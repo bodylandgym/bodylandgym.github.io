@@ -4,165 +4,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>باشگاه سرزمین بدن | Bodyland Gym</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>BODYLAND GYM | سرزمین بدن</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Vazirmatn',sans-serif;background:#0b0b0d;color:#fff}
-:root{--red:#e32636;--dark:#111114;--gray:#aaa}
-header{height:75px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#101013;border-bottom:1px solid #29292d;position:sticky;top:0;z-index:10}
-.logo{font-size:21px;font-weight:900}
+body{margin:0;background:#101010;color:#fff;font-family:Vazirmatn,sans-serif;line-height:1.9}
+:root{--red:#e32636;--card:#1b1b1b;--muted:#bbb}
+
+/* صفحه شروع */
+.intro{
+position:fixed;inset:0;z-index:1000;background:#090909;
+display:flex;align-items:center;justify-content:center;text-align:center;
+animation:introOut .8s ease 2.7s forwards;
+}
+.intro-content{animation:introIn 1s ease}
+.intro h1{font-size:clamp(38px,9vw,72px);font-weight:900;line-height:1.3;margin:0}
+.intro h1 span{color:var(--red)}
+.intro p{letter-spacing:5px;color:#aaa;font-size:13px}
+.intro-line{width:65px;height:4px;background:var(--red);margin:20px auto}
+@keyframes introIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes introOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+
+/* هدر */
+header{position:sticky;top:0;z-index:10;background:#111f;border-bottom:1px solid #333;padding:14px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.logo{font-size:23px;font-weight:900}
 .logo span{color:var(--red)}
-nav{display:flex;gap:25px}
-nav a{color:#ddd;text-decoration:none;font-size:14px}
+nav{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
+nav a{text-decoration:none;color:white}
 nav a:hover{color:var(--red)}
-.hero{min-height:600px;display:flex;align-items:center;padding:80px 9%;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1800') center/cover}
-.hero-content{max-width:650px}
-.tag{color:#ff5260;font-weight:700;letter-spacing:2px}
-h1{font-size:clamp(38px,6vw,70px);line-height:1.5;margin:20px 0}
-h1 span{color:var(--red)}
-.hero p{color:#ddd;line-height:2;font-size:17px;max-width:520px}
-.btn{display:inline-block;margin-top:30px;background:var(--red);padding:14px 32px;color:white;text-decoration:none;border-radius:5px;font-weight:700;transition:.3s}
-.btn:hover{background:#a90f20;transform:translateY(-3px)}
-section{padding:85px 8%}
-.section-title{text-align:center;margin-bottom:45px}
-.section-title small{color:var(--red);font-weight:800}
-.section-title h2{font-size:32px;margin-top:10px}
-.section-title p{color:var(--gray);margin-top:10px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about img{width:100%;height:350px;object-fit:cover;border-radius:10px}
-.about h2{font-size:32px;margin-bottom:20px}
-.about p{color:#bbb;line-height:2.3}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.feature,.price{background:#151518;border:1px solid #29292d;border-radius:10px;padding:30px;transition:.3s}
-.feature:hover,.price:hover{border-color:var(--red);transform:translateY(-5px)}
-.feature .symbol{font-size:32px;color:var(--red)}
-.feature h3{margin:15px 0}
-.feature p{color:#aaa;line-height:2}
-.prices{background:#101013}
-.price-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.price{text-align:center}
-.price.featured{border:1px solid var(--red)}
-.price h3{font-size:22px}
-.price .amount{font-size:25px;color:var(--red);font-weight:900;margin:22px 0}
-.price p{color:#aaa;line-height:2}
-.price .btn{width:100%}
-.contact{text-align:center}
-.contact p{color:#aaa;line-height:2}
-footer{background:#070708;padding:30px;text-align:center;color:#888;border-top:1px solid #252529}
-footer span{color:var(--red)}
-@media(max-width:750px){
-header{padding:0 5%;height:auto;min-height:70px;flex-wrap:wrap;gap:10px;padding-top:15px;padding-bottom:15px}
-nav{width:100%;justify-content:center;gap:15px;flex-wrap:wrap}
-nav a{font-size:12px}
-.hero{min-height:520px;padding:60px 7%}
-.hero p{font-size:15px}
-section{padding:65px 6%}
+
+/* بخش اصلی */
+.hero{min-height:480px;display:flex;align-items:center;padding:65px 8%;background:linear-gradient(90deg,#090909ed,#09090999),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85') center/cover}
+.hero h1{font-size:clamp(35px,7vw,65px);line-height:1.4;margin:0}
+.hero h1 span{color:var(--red)}
+.hero p{color:#ddd;font-size:18px}
+.btn{display:inline-block;background:var(--red);padding:11px 25px;border-radius:7px;font-weight:bold;margin-top:12px;color:white;text-decoration:none}
+section{padding:65px 8%}
+.heading{text-align:center;font-size:30px;margin:0 0 30px}
+.heading span{color:var(--red)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.about img{width:100%;height:300px;object-fit:cover;border-radius:12px}
+.about p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:17px}
+.card{background:var(--card);padding:22px;border:1px solid #333;border-radius:12px;text-align:center}
+.card h3{color:var(--red);margin-top:0}
+.price{font-size:23px;font-weight:900;margin:10px 0}
+.price small{font-size:13px;color:var(--muted)}
+.note{font-size:13px;color:#aaa}
+.schedule{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.schedule .card{text-align:right}
+.schedule p{border-bottom:1px solid #333;padding-bottom:10px;color:#ddd}
+.contact{text-align:center;background:#191919}
+.contact p{color:#ddd}
+.contact a:not(.btn){color:#fff;text-decoration:none}
+.contact .contact-number{display:block;margin:10px}
+footer{text-align:center;padding:25px;background:#090909;color:#aaa}
+@media(max-width:650px){
+header{justify-content:center}
+nav{justify-content:center;gap:12px}
 .about{grid-template-columns:1fr}
-.about img{height:250px}
-.features,.price-list{grid-template-columns:1fr}
-.section-title h2{font-size:27px}
+.hero{min-height:400px}
+section{padding:45px 6%}
 }
 </style>
 </head>
 <body>
 
+<div class="intro">
+ <div class="intro-content">
+  <h1>BODYLAND<br><span>GYM</span></h1>
+  <div class="intro-line"></div>
+  <p>POWER • HEALTH • FITNESS</p>
+ </div>
+</div>
+
 <header>
-<div class="logo">BODYLAND <span>GYM</span></div>
-<nav>
-<a href="#home">خانه</a>
-<a href="#about">درباره ما</a>
-<a href="#features">امکانات</a>
-<a href="#prices">تعرفه‌ها</a>
-<a href="#contact">تماس</a>
-</nav>
+ <div class="logo">BODYLAND <span>GYM</span></div>
+ <nav>
+  <a href="#home">خانه</a>
+  <a href="#about">درباره ما</a>
+  <a href="#prices">تعرفه‌ها</a>
+  <a href="#hours">ساعت کاری</a>
+  <a href="#contact">تماس با ما</a>
+ </nav>
 </header>
 
 <div class="hero" id="home">
-<div class="hero-content">
-<div class="tag">BODYLAND FITNESS CLUB</div>
-<h1>قدرتت رو بساز،<br><span>بهترین خودت باش!</span></h1>
-<p>به باشگاه بدنسازی سرزمین بدن خوش آمدید؛ جایی برای ساختن قدرت، افزایش انگیزه و رسیدن به اهداف ورزشی.</p>
-<a class="btn" href="#prices">مشاهده تعرفه‌ها ←</a>
-</div>
+ <div>
+  <h1>اینجا آغاز<br><span>قدرت توست!</span></h1>
+  <p>با انگیزه شروع کن، با قدرت ادامه بده و به بهترین نسخه خودت تبدیل شو.</p>
+  <a href="#prices" class="btn">مشاهده تعرفه عضویت</a>
+ </div>
 </div>
 
 <section id="about">
-<div class="about">
-<div>
-<div class="tag">ABOUT BODYLAND</div>
-<h2>به سرزمین بدن خوش آمدید</h2>
-<p>ما در باشگاه سرزمین بدن تلاش می‌کنیم محیطی حرفه‌ای و پرانرژی برای ورزش و پیشرفت شما فراهم کنیم. هدف ما همراهی شما در مسیر تناسب اندام، قدرت و سلامتی است.</p>
-<a class="btn" href="#contact">ارتباط با ما</a>
-</div>
-<img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900" alt="محیط باشگاه بدنسازی">
-</div>
+ <h2 class="heading">به سرزمین <span>بدن خوش آمدید</span></h2>
+ <div class="about">
+  <div>
+   <h2>BODYLAND GYM</h2>
+   <p>در سرزمین بدن، هر روز فرصتی تازه برای پیشرفت است. با تمرین منظم، اراده و پشتکار، مسیر سلامتی و تناسب اندام خودت را بساز.</p>
+   <p>هدف ما همراهی شما در مسیر قدرت، نشاط و سبک زندگی سالم‌تر است.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85" alt="باشگاه بدنسازی">
+ </div>
 </section>
 
-<section id="features">
-<div class="section-title">
-<small>WHY BODYLAND</small>
-<h2>امکانات باشگاه</h2>
-<p>فضایی برای تمرین، تلاش و پیشرفت</p>
-</div>
-<div class="features">
-<div class="feature">
-<div class="symbol">🏋️</div>
-<h3>تجهیزات ورزشی</h3>
-<p>فضای تمرینی با تجهیزات بدنسازی متنوع</p>
-</div>
-<div class="feature">
-<div class="symbol">💪</div>
-<h3>تمرین حرفه‌ای</h3>
-<p>امکان تمرین در مسیر اهداف ورزشی شما</p>
-</div>
-<div class="feature">
-<div class="symbol">🔥</div>
-<h3>محیط پرانرژی</h3>
-<p>محیطی مناسب برای انگیزه و استمرار در تمرین</p>
-</div>
-</div>
+<section id="prices">
+ <h2 class="heading">تعرفه <span>عضویت</span></h2>
+ <div class="cards">
+  <div class="card">
+   <h3>پلن ۸ جلسه‌ای</h3>
+   <div class="price">۲٬۴۰۰٬۰۰۰</div>
+   <small>تومان</small>
+  </div>
+  <div class="card">
+   <h3>پلن ۱۲ جلسه‌ای</h3>
+   <div class="price">۲٬۶۰۰٬۰۰۰</div>
+   <small>تومان</small>
+  </div>
+  <div class="card">
+   <h3>پلن ۱۶ جلسه‌ای</h3>
+   <div class="price">۲٬۹۰۰٬۰۰۰</div>
+   <small>تومان</small>
+  </div>
+  <div class="card">
+   <h3>پلن ۲۰ جلسه‌ای</h3>
+   <div class="price">۳٬۲۰۰٬۰۰۰</div>
+   <small>تومان</small>
+  </div>
+  <div class="card">
+   <h3>پلن ۲۴ جلسه‌ای</h3>
+   <div class="price">۳٬۵۰۰٬۰۰۰</div>
+   <small>تومان</small>
+  </div>
+ </div>
+ <p class="note" style="text-align:center">برای اطلاع از شرایط ثبت‌نام و عضویت با باشگاه تماس بگیرید.</p>
 </section>
 
-<section class="prices" id="prices">
-<div class="section-title">
-<small>MEMBERSHIP</small>
-<h2>برنامه‌های عضویت</h2>
-<p>برای شروع مسیر ورزشی خود انتخاب کنید</p>
-</div>
-<div class="price-list">
-<div class="price">
-<h3>عضویت یک ماهه</h3>
-<div class="amount">قیمت تماس بگیرید</div>
-<p>یک ماه تمرین در باشگاه</p>
-</div>
-<div class="price featured">
-<h3>عضویت سه ماهه</h3>
-<div class="amount">قیمت تماس بگیرید</div>
-<p>سه ماه تمرین در باشگاه</p>
-<a class="btn" href="#contact">اطلاعات بیشتر</a>
-</div>
-<div class="price">
-<h3>عضویت شش ماهه</h3>
-<div class="amount">قیمت تماس بگیرید</div>
-<p>شش ماه تمرین در باشگاه</p>
-</div>
-</div>
+<section id="hours">
+ <h2 class="heading">برنامه <span>ساعت کاری</span></h2>
+ <div class="schedule">
+  <div class="card">
+   <h3>ساعت کاری آقایان</h3>
+   <p>شنبه تا چهارشنبه: ۶ تا ۸ صبح</p>
+   <p>شنبه تا چهارشنبه: ۱۴ تا ۲۳:۴۵</p>
+   <p>پنجشنبه: ۱۴ تا ۲۱:۴۵</p>
+   <p>جمعه: ۱۴ تا ۱۸:۴۵</p>
+  </div>
+  <div class="card">
+   <h3>ساعت کاری بانوان</h3>
+   <p>شنبه تا پنجشنبه: ۸ تا ۱۴</p>
+  </div>
+ </div>
 </section>
 
-<section class="contact" id="contact">
-<div class="section-title">
-<small>CONTACT US</small>
-<h2>شروع مسیرت از اینجاست!</h2>
-</div>
-<p>برای اطلاع از شرایط ثبت‌نام و تعرفه‌ها با باشگاه تماس بگیرید.</p>
-<a class="btn" href="tel:">تماس با باشگاه</a>
+<section id="contact" class="contact">
+ <h2 class="heading">ارتباط با <span>ما</span></h2>
+ <p>برای دریافت اطلاعات بیشتر و هماهنگی ثبت‌نام با ما در تماس باشید.</p>
+ <p>آدرس: اصفهان، جی، خیابان تالار</p>
+ <a class="contact-number" href="tel:09131928262">۰۹۱۳۱۹۲۸۲۶۲</a>
+ <a class="contact-number" href="tel:03132301313">۰۳۱۳۲۳۰۱۳۱۳</a>
+ <a href="https://www.google.com/maps/search/?api=1&query=اصفهان+جی+خیابان+تالار" target="_blank" class="btn">مشاهده موقعیت روی نقشه</a>
 </section>
 
 <footer>
-<p>© تمامی حقوق برای <span>باشگاه سرزمین بدن</span> محفوظ است.</p>
-<p>BODYLAND GYM</p>
+ <div class="logo">BODYLAND <span>GYM</span></div>
+ <p>قدرت، سلامتی، پیشرفت</p>
+ <p>تمام حقوق این وب‌سایت متعلق به باشگاه سرزمین بدن است.</p>
 </footer>
 
 </body>
